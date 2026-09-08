@@ -1250,12 +1250,26 @@ a.contact-info-item:hover .contact-info-value { color: var(--gold); }
   transition: width .05s linear;
 }
 
-/* ===== generic: availability + form as a centered full-width row ===== */
-.contact-bottom { max-width: 720px; margin: 48px auto 0; text-align: center; }
-.contact-bottom .availability-note { justify-content: center; width: fit-content; margin-left: auto; margin-right: auto; }
-.contact-bottom .contact-form { text-align: center; }
-.contact-bottom .form-group { text-align: center; }
-.contact-bottom .submit-btn { width: auto; min-width: 240px; margin: 0 auto; display: block; }
+/* ===== generic: polished, filled contact panel ===== */
+.contact-bottom { max-width: 1080px; margin: 56px auto 0; }
+.contact-bottom .availability-note { justify-content: center; width: fit-content; margin: 0 auto 26px; }
+.contact-card {
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--gold);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.025);
+  padding: 38px 44px 34px;
+  box-shadow: 0 26px 70px rgba(0,0,0,.28);
+}
+.contact-bottom .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 26px; text-align: left; }
+.contact-bottom .form-group { margin-bottom: 0; text-align: left; }
+.contact-bottom .form-group:last-of-type { grid-column: 1 / -1; }
+.contact-bottom .submit-btn { grid-column: 1 / -1; width: auto; min-width: 260px; margin: 6px auto 0; display: block; }
+@media (max-width: 760px) {
+  .contact-bottom { margin-top: 40px; }
+  .contact-card { padding: 26px 20px 24px; }
+  .contact-bottom .contact-form { grid-template-columns: 1fr; gap: 18px; }
+}
 
 </style>
 </head>
@@ -1654,7 +1668,8 @@ a.contact-info-item:hover .contact-info-value { color: var(--gold); }
           <span data-en="Available to start immediately · Open to new opportunities" data-zh="可立即到岗 · 开放新机会">Available to start immediately · Open to new opportunities</span>
         </div>
 
-        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="contact-card">
+<form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
           <div class="form-group">
             <label for="formName" data-en="Your Name" data-zh="您的姓名">Your Name</label>
             <input type="text" id="formName" data-ph-en="How should I address you?" data-ph-zh="请问如何称呼您？" placeholder="How should I address you?" required>
@@ -1669,6 +1684,7 @@ a.contact-info-item:hover .contact-info-value { color: var(--gold); }
           </div>
           <button type="submit" class="submit-btn" data-en="Send Message" data-zh="发送留言">Send Message</button>
         </form>
+          </div>
     </div>
 
     <div class="footer-note">
