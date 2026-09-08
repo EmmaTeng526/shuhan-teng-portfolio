@@ -1250,11 +1250,12 @@ a.contact-info-item:hover .contact-info-value { color: var(--gold); }
   transition: width .05s linear;
 }
 
-/* ===== generic: center availability note + contact form only ===== */
-.contact-left .availability-note { justify-content: center; width: fit-content; margin-left: auto; margin-right: auto; }
-.contact-left .contact-form { text-align: center; }
-.contact-left .form-group { text-align: center; }
-.contact-left .submit-btn { width: auto; min-width: 240px; margin: 0 auto; display: block; }
+/* ===== generic: availability + form as a centered full-width row ===== */
+.contact-bottom { max-width: 720px; margin: 48px auto 0; text-align: center; }
+.contact-bottom .availability-note { justify-content: center; width: fit-content; margin-left: auto; margin-right: auto; }
+.contact-bottom .contact-form { text-align: center; }
+.contact-bottom .form-group { text-align: center; }
+.contact-bottom .submit-btn { width: auto; min-width: 240px; margin: 0 auto; display: block; }
 
 </style>
 </head>
@@ -1626,7 +1627,29 @@ a.contact-info-item:hover .contact-info-value { color: var(--gold); }
         <h2 data-i18n="contactTitle">Let's Build Our Journey Together.</h2>
         <p class="contact-lede" data-i18n="contactPitch">Open to <strong>brand marketing, content and communications</strong> opportunities, bringing campaign execution, bilingual content creation, social media instinct, and AI-powered productivity to your team. Let's connect.</p>
 
-        <div class="availability-note">
+        
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="contact-info-list">
+          <a href="mailto:tengshuhan@152mail.com.cn" class="contact-info-item">
+            <span class="contact-info-label" data-en="Email" data-zh="邮箱">Email</span>
+            <span class="contact-info-value">tengshuhan@152mail.com.cn</span>
+          </a>
+          <div class="contact-info-item">
+            <span class="contact-info-label" data-en="WeChat" data-zh="微信">WeChat</span>
+            <span class="contact-info-value">13867893458</span>
+          </div>
+          <a href="tel:+8613867893458" class="contact-info-item">
+            <span class="contact-info-label" data-en="Phone" data-zh="电话">Phone</span>
+            <span class="contact-info-value">+86 138 6789 3458</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-bottom reveal">
+<div class="availability-note">
           <span class="avail-dot"></span>
           <span data-en="Available to start immediately · Open to new opportunities" data-zh="可立即到岗 · 开放新机会">Available to start immediately · Open to new opportunities</span>
         </div>
@@ -1646,24 +1669,6 @@ a.contact-info-item:hover .contact-info-value { color: var(--gold); }
           </div>
           <button type="submit" class="submit-btn" data-en="Send Message" data-zh="发送留言">Send Message</button>
         </form>
-      </div>
-
-      <div class="reveal reveal-delay-1">
-        <div class="contact-info-list">
-          <a href="mailto:tengshuhan@152mail.com.cn" class="contact-info-item">
-            <span class="contact-info-label" data-en="Email" data-zh="邮箱">Email</span>
-            <span class="contact-info-value">tengshuhan@152mail.com.cn</span>
-          </a>
-          <div class="contact-info-item">
-            <span class="contact-info-label" data-en="WeChat" data-zh="微信">WeChat</span>
-            <span class="contact-info-value">13867893458</span>
-          </div>
-          <a href="tel:+8613867893458" class="contact-info-item">
-            <span class="contact-info-label" data-en="Phone" data-zh="电话">Phone</span>
-            <span class="contact-info-value">+86 138 6789 3458</span>
-          </a>
-        </div>
-      </div>
     </div>
 
     <div class="footer-note">
